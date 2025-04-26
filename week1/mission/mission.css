@@ -1,0 +1,48 @@
+body {
+    margin: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    justify-items: center;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 3px;
+}
+
+header {
+    justify-items: center;
+    width: 100%;
+}
+
+#makeBlue {
+    justify-self: center;
+    letter-spacing: 4px;
+    color: #006eb6;
+}
+
+main {
+    margin-top: 10%;
+}
+
+p {
+    font-size: 20px;
+}
+#italics {
+    font-style: italic;
+}
+
+#indentMe {
+    margin-left: 3%;
+}
+
+img {
+    width: 150px;
+}
