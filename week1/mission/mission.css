@@ -8,8 +8,18 @@ body {
     border-width: 1px;
     border-color: black;
     justify-items: center;
+    justify-self: center;
     max-width: 600px;
     line-height: 1.5;
+}
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark h3 {
+    color: #A0D4ED;
 }
 
 h1 {
@@ -22,10 +32,14 @@ header {
     width: 100%;
 }
 
-#makeBlue {
+h2 {
     justify-self: center;
     letter-spacing: 4px;
     color: #006eb6;
+}
+
+.dark h2 {
+    color: #A0D4ED;
 }
 
 main {
