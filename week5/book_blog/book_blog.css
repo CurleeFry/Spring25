@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+  --primary-font: Roboto, sans-serif;
+  --secondary-font: san-serif;
+}
+
+body {
+    background-color: rgb(248, 246, 236);
+    margin: 0;
+    font-family: var(--primary-font);
+    height: 100%;
+}
+
+main {
+    padding-top: 8%;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+
+nav {
+    margin-right: 8%;
+    text-align: right;
+    word-spacing: 10%;
+    border-bottom: 3px solid rgb(10, 51, 10);
+}
+
+h1 {
+    color: rgb(10, 51, 10);
+}
+
+h2 {
+    color: rgb(134, 18, 18);
+}
+
+a {
+    color: rgb(134, 18, 18);
+    text-decoration: none;
+}
+
+img {
+    margin: auto;
+    max-height: 25%;
+    max-width:15%
+}
+
+header {
+    height: 18%;
+    text-align: center;
+    border-bottom: 3px solid rgb(10, 51, 10);
+}
+
+.row1 {
+    grid-row: 1;
+}
+.row2 {
+    grid-row: 2;
+}
+
+.column1 {
+    grid-column: 1;
+    text-align: right;
+    margin-right: 8%;
+}
+.column2 {
+    padding-left: 4%;
+    padding-right: 4%;
+    grid-column: 2;
+    border-left: 3px solid rgb(10, 51, 10);
+    border-right: 3px solid rgb(10, 51, 10);
+}
+.column3{
+    grid-column: 3;
+    border-top: 3px solid rgb(10, 51, 10);
+
+}

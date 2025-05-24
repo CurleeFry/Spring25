@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events Practice: To-Dos</title>
+  <script src="domEvents.js" defer></script>
+  <style>
+    .todos {
+      width: 300px;
+      padding: 0;
+      list-style: none;
+    }
+    .todos > li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid;
+      padding: 0.5em;
+    }
+    .todos p {
+      margin: 0;
+    }
+    .todos button {
+      cursor: pointer;
+    }
+    .strike {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>To-Do List</h1>
+    <section aria-labelledby="add-task-heading">
+      <h2 id="add-task-heading" class="visually-hidden">Add a New Task</h2>
+      <form id="todoForm">
+        <label for="todo">Enter Task</label>
+        <input name="todo" id="todo" type="text" required aria-required="true" />
+        <button id="submitTask" type="submit">Enter</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="task-list-heading">
+      <h2 id="task-list-heading">Task List</h2>
+      <ul id="todoList" class="todos" role="list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="events.js"></script>
+</body>
+</html>
