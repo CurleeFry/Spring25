@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    position: relative;
+    display: grid;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('threesmoothies.jpg') center/cover no-repeat;
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+header {
+    justify-content: center;
+    height: 15vh;
+    color: rgb(230, 230, 230);
+    background-color: #55c7e2;
+}
+
+h1 {
+    justify-self: center;
+    align-self: center;
+}
+
+#stuff {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 1fr 50px;
+    grid-template-rows: 10px 10px 1fr 20px;
+}
+
+footer {
+    height: 15vh;
+    background-color: #55c7e2;
+}
+
+p {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4 ;
+    font-size: 25px;
+}
+
+#mylogo {
+    width: 50px;
+    justify-self: center;
+}
+
+.redirectors {
+    grid-column: 4 / 5 ;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px;
+}
+
+.redirectors div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+h3 {
+    font-size: 24px;
+    float: right;
+    gap: 30px;
+} 
+
+.location_img {
+    width: 140px;
+    height: 100px;
+    border-radius: 50%;
+    float:left
+}
+
+h2 {
+    justify-self: center;
+    grid-row: 2 /3;
+    grid-column: 4 /5 ;
+}
+
+#Rexburg {
+    grid-row: 1 /2 ;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+#IF {
+    grid-row: 2 /3 ;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+#Original_Site {
+    grid-row: 3 /4 ;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}

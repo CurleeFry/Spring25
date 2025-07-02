@@ -1,0 +1,12 @@
+As of right now, the plan is:
+
+The Python will:
+
+1. Scrape the data using a python file
+2. Store labor data in a CSV file.
+3. Make the python file run and refresh so that labor data is live feed
+
+The HTML will:
+
+1. Use Javascript to read the CSV and pass it so the UI page
+2. Loop the Javascript so that it displays the most recent CSV data

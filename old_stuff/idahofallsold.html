@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropical Smoothie Cafe Labor Manager+</title>
+    <link rel="stylesheet" href="sub_site.css">
+    <script>
+        async function loadCSV() {
+            const response = await fetch('idahofalls.csv');
+            const data = await response.text();
+            const rows = data.split('\n').map(row => row.split(','));
+            
+            function formatPercentage(value) {
+                return value.replace(/%+/g, '%');
+            }
+            
+            // Green Box (Lines 2-6)
+            document.querySelector("#greenbox h1:nth-of-type(1)").innerText = rows[1][0]; // Date
+            document.querySelector("#greenbox h1:nth-of-type(2)").innerText = rows[2][0]; // Time
+            document.querySelector("#greenbox h1:nth-of-type(3)").innerText = formatPercentage(rows[3][0]); // Daily Labor
+            document.querySelector("#greenbox h1:nth-of-type(4)").innerText = formatPercentage(rows[4][0]); // Current Hourly Rate
+            
+            // Yellow Box (Lines 7-9)
+            document.querySelector("#morning_block h1").innerText = formatPercentage(rows[6][0]); // Morning
+            document.querySelector("#afternoon_block h1").innerText = formatPercentage(rows[7][0]); // Afternoon
+            document.querySelector("#evening_block h1").innerText = formatPercentage(rows[8][0]); // Evening
+            
+            // Orange Box (Lines 12-18)
+            const weekData = rows.slice(11, 18);
+            document.querySelectorAll("#turbogrid .date").forEach((el, i) => el.innerText = weekData[i][0]);
+            document.querySelectorAll("#turbogrid .laborpercent").forEach((el, i) => el.innerText = formatPercentage(weekData[i][1]));
+            document.querySelectorAll("#turbogrid .morning").forEach((el, i) => el.innerText = formatPercentage(weekData[i][2]));
+            document.querySelectorAll("#turbogrid .afternoon").forEach((el, i) => el.innerText = formatPercentage(weekData[i][3]));
+            document.querySelectorAll("#turbogrid .evening").forEach((el, i) => el.innerText = formatPercentage(weekData[i][4]));
+        }
+        
+        document.addEventListener("DOMContentLoaded", loadCSV);
+    </script>
+</head>
+<body>
+    <header class="bigfall">
+    <h2 id= "title">Idaho Falls Location Labor Information</h2>
+    </header>
+    <main>
+        <div id="greenbox">
+            <div id="innerboxg">
+                <h2>Date:</h2>
+                <h1>DD/M/YYYY</h1>
+                <h2>Time:</h2>
+                <h1>XX:XX</h1>
+                <h2>Daily Labor:</h2>
+                <h1>XX%</h1>
+                <h2>Current Hourly Rate:</h2>
+                <h1>XX%</h1>
+            </div>
+        </div>
+        <div id="yellowbox">
+            <div id="innerboxy">
+                <h2 id="y_title">Labor by time of day:</h2>
+                <div id="morning_block">
+                    <p>Morning<br>6:00AM - 11:30AM</p>
+                    <h1 class="right">XX%</h1>
+                </div>
+                <div id="afternoon_block">
+                    <p>Afternoon<br>11:30AM - 5:00PM</p>
+                    <h1 class="right">XX%</h1>
+                </div>
+                <div id="evening_block">
+                    <p>Evening<br>5:00PM - 10:30PM</p>
+                    <h1 class="right">XX%</h1>
+                </div>
+            </div>
+        </div>
+        <div id="orangebox">
+            <div id="innerboxo">
+                <h2 id="o_title">Weekly Labor Trends:</h2>
+                <div id="turbogrid">
+                    <p>Date</p><p>Daily Labor</p><p>Morning</p><p>Afternoon</p><p>Evening</p>
+                    <p class="date">X</p><p class="laborpercent">X</p><p class="morning">X</p><p class="afternoon">X</p><p class="evening">X</p>
+                    <p class="date">X</p><p class="laborpercent">X</p><p class="morning">X</p><p class="afternoon">X</p><p class="evening">X</p>
+                    <p class="date">X</p><p class="laborpercent">X</p><p class="morning">X</p><p class="afternoon">X</p><p class="evening">X</p>
+                    <p class="date">X</p><p class="laborpercent">X</p><p class="morning">X</p><p class="afternoon">X</p><p class="evening">X</p>
+                    <p class="date">X</p><p class="laborpercent">X</p><p class="morning">X</p><p class="afternoon">X</p><p class="evening">X</p>
+                    <p class="date">X</p><p class="laborpercent">X</p><p class="morning">X</p><p class="afternoon">X</p><p class="evening">X</p>
+                    <p class="date">X</p><p class="laborpercent">X</p><p class="morning">X</p><p class="afternoon">X</p><p class="evening">X</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bigfall">
+        <a id="homepage" href="manager_plus_home.html">Return to Homepage</a>
+        <img src="tropmanpluslogo.png" alt="site logo">
+    </footer>
+</body>
+</html>

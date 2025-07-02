@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* margin-top: 15vh; */
+    font-family: "Noto Sans", sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    background: url('threesmoothies.jpg') center/cover no-repeat;
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+#title {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 25px;
+    margin-top: 5vh;
+}
+
+#greenbox {
+    width: 100%;
+    height: 60vh;
+    justify-self: center;
+    grid-column: 1;
+    background-color:  #859040;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#innerboxg {
+    justify-self: center;
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    align-content: space-around;
+}
+
+#yellowbox {
+    width: 100%;
+    justify-self: center;
+    grid-column: 2;
+    background-color: #efb32a;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: grid;
+}
+
+#innerboxy {
+    justify-self: center;
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#y_title {
+    justify-self: center;
+    text-align: center;
+}
+
+#morning_block {
+    grid-row: 2;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#afternoon_block {
+    grid-row: 3;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#evening_block {
+    grid-row: 4;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.right {
+    grid-column: 2;
+    margin: auto auto;
+}
+
+.left {
+    justify-items: center;
+    grid-column: 1;
+    margin: auto auto;
+}
+
+#orangebox {
+    width: 100%;
+    height: 60vh;
+    justify-self: center;
+    grid-column: 3;
+    background-color:  #e96429;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#innerboxo {
+    justify-self: center;
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+#o_title {
+    justify-self: center;
+    text-align: center;
+}
+
+#turbogrid {
+    grid-row: 2;
+    height: 100%;
+    border: 2px solid #000;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.current_date {
+    grid-row: 2;
+    margin: auto auto;
+}
+.current-1 {
+    grid-row: 3;
+    margin: auto auto;
+}
+.current-2 {
+    grid-row: 4;
+    margin: auto auto;
+}
+.current-3 {
+    grid-row: 5;
+    margin: auto auto;
+}
+.current-4 {
+    grid-row: 6;
+    margin: auto auto;
+}
+.current-5 {
+    grid-row: 7;
+    margin: auto auto;
+}
+.current-6 {
+    grid-row: 8;
+    margin: auto auto;
+}
+
+.date {
+    grid-column: 1;
+}
+.laborpercent {
+    grid-column: 2;
+}
+.morning {
+    grid-column: 3;
+}
+.afternoon {
+    grid-column: 4;
+}
+.evening {
+    grid-column: 5;
+}
+
+img {
+    width: 50px;
+}
+
+#homepage {
+    grid-column: 3;
+    justify-self: right;
+    align-content: center;
+}
