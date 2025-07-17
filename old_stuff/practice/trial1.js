@@ -1,6 +1,8 @@
 let currentFilename = "";
 let currentLaborData = [];
 
+
+
 async function loadCSV(csvFile) {
     const response = await fetch(csvFile);
     const data = await response.text();
