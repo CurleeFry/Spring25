@@ -123,6 +123,11 @@ main {
   overflow: auto;
 }
 
+#innerboxg {
+  padding: 15px;
+  line-height: 0.5;
+}
+
 #innerboxy {
   display: grid;
   grid-template-rows: auto repeat(3, auto);
